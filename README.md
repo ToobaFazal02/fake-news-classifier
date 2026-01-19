@@ -1,17 +1,19 @@
-# Fake News Classifier
+# 🕵️ Fake News Classifier
 
-A full-stack machine learning application that detects whether a news article is **REAL** or **FAKE**. 
+> **Status:** Completed | **Accuracy:** 97% | **Live Demo:** [Available Locally]
 
-This project demonstrates an end-to-end ML pipeline: from data preprocessing and model training (Scikit-Learn) to serving predictions via a REST API (FastAPI) and an interactive frontend (Streamlit).
+A full-stack machine learning application that detects whether a news article is **REAL** or **FAKE** using Natural Language Processing (NLP).
+![demo1](https://github.com/user-attachments/assets/f8df011c-5818-4bf6-b5b3-769b19b2e0f4)
+![demo2](https://github.com/user-attachments/assets/62da1a4f-d60c-4cc6-b332-76e36ddb0bb0) 
 
-## Features
+## 🚀 Features
 
-- **Machine Learning Core**: Uses TF-IDF Vectorization and Logistic Regression for high interpretability and efficiency.
-- **REST API**: A robust FastAPI backend to serve predictions programmatically.
-- **Interactive UI**: A Streamlit dashboard for real-time user testing.
-- **Preprocessing Pipeline**: Includes custom text cleaning, tokenization, and stopword removal.
+- ** Machine Learning Core**: Trained on 40,000+ articles using TF-IDF Vectorization & Logistic Regression.
+- ** REST API**: High-performance FastAPI backend for serving predictions.
+- ** Interactive UI**: A professional Streamlit dashboard with real-time confidence gauges.
+- ** Visual Analytics**: Breakdown of probability scores and confidence metrics.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Language**: Python 3.9+
 - **ML**: Scikit-Learn, Pandas, NumPy
@@ -19,7 +21,7 @@ This project demonstrates an end-to-end ML pipeline: from data preprocessing and
 - **Frontend**: Streamlit
 - **Serialization**: Joblib
 
-## Project Structure
+## 📂 Project Structure
 
 ```bash
 fake-news-classifier/
@@ -28,88 +30,27 @@ fake-news-classifier/
 │   ├── main.py           # API Endpoints
 │   └── schema.py         # Pydantic Models
 │
-├── data/                 # Raw and processed datasets
+├── data/                 # Processed datasets
 │
 ├── model/                # Serialized models (.pkl files)
 │
-├── training/             # Training scripts and notebooks
+├── training/             # Training scripts
 │   └── train_model.py
 │
 ├── ui/                   # Streamlit Frontend
 │   └── streamlit_app.py
 │
+├── run.bat               # One-click startup script (Windows)
 ├── requirements.txt      # Dependencies
 └── README.md             # Project Documentation
-
-```
-
-## Installation & Setup
-
-1. **Clone the repository**
-```bash
-git clone [https://github.com/ToobaFazal02/fake-news-classifier.git](https://github.com/ToobaFazal02/fake-news-classifier.git)
+ Installation & SetupClone the repositoryBashgit clone [https://github.com/ToobaFazal02/fake-news-classifier.git](https://github.com/ToobaFazal02/fake-news-classifier.git)
 cd fake-news-classifier
-
-```
-
-
-2. **Create a Virtual Environment**
-```bash
-python -m venv venv
+Create & Activate Virtual EnvironmentBashpython -m venv venv
 # Windows
 .\venv\Scripts\activate
 # Mac/Linux
 source venv/bin/activate
-
-```
-
-
-3. **Install Dependencies**
-```bash
-pip install -r requirements.txt
-
-```
-
-
-
-## 🏃‍♂️ How to Run
-
-### 1. Train the Model (First Run Only)
-
-Before running the app, train the model to generate the `.pkl` files.
-
-```bash
-python training/train_model.py
-
-```
-
-### 2. Run the Backend (API)
-
-Start the FastAPI server:
-
-```bash
-uvicorn app.main:app --reload
-
-```
-
-*API will be running at: `http://127.0.0.1:8000*`
-*Swagger Docs: `http://127.0.0.1:8000/docs*`
-
-### 3. Run the Frontend (UI)
-
-In a new terminal, start the Streamlit app:
-
-```bash
-streamlit run ui/streamlit_app.py
-
-```
-
-## 📊 Model Performance
-
-*(Metrics will be added here after training - e.g., Accuracy, Precision, Recall)*
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests.
-
-
+Install DependenciesBashpip install -r requirements.txt
+ How to RunOption 1: One-Click (Windows)Double-click the run.bat file. It will automatically set up the environment and launch both servers.Option 2: Manual StartStep 1: Start Backend (API)Bashuvicorn app.main:app --reload
+API runs at: http://127.0.0.1:8000Step 2: Start Frontend (UI)Open a new terminal and run:Bashstreamlit run ui/streamlit_app.py
+Model PerformanceThe Logistic Regression model was trained and evaluated on a balanced dataset.MetricScoreAccuracy97%Precision0.96Recall0.97F1-Score0.97 ContributingFeel free to fork this repository and submit pull requests.
